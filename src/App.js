@@ -7,7 +7,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="row App">
+				<div className="row app">
 					<ListClients />
 					<OpenClient />
 				</div>

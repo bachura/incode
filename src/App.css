@@ -1,28 +1,61 @@
-.App {
-  text-align: center;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%; 
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 16px; 
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+textarea:focus,
+input:focus {
+	outline: none; 
 }
 
-.App-title {
-  font-size: 1.5em;
+li {
+	list-style-type: none; 
+}
+.list-clients-wrap {
+	border: 1px solid #ddd;
+}
+.search {
+	padding: 0 5px; 
+}
+.search .input {
+	padding: 0 10px;
+	margin: 15px 0;
+	width:  100%;
+}
+.search .input input {
+	border-radius: 0;	
+}
+.list-clients-wrap .client {
+	display: block;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-left: none;
+	border-right: none;
+	color: #444;
+}
+.list-clients-wrap .client img {
+	max-width: 80px;
+	height: auto;
+}
+.list-clients-wrap .client h2 {
+	margin: 0;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+.list-clients-wrap .client h3 {
+	margin: 0;
+	font-size: 16px;
+}
+.client-info {
+	display: flex;
+	align-items: center;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}

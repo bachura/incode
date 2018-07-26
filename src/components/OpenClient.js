@@ -6,7 +6,7 @@ class OpenClient extends Component {
 	render() {
 		console.log(this.props.clients);
 		return (
-			<div className="col-md-8">
+			<div className="col-sm-7">
 				<div className="open-client">
 					Client Open
 				</div>
