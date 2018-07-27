@@ -1,6 +1,23 @@
-const initState = require('../clients');
+const initStateClients = require('../clients');
+const initStateClient = require('../client');
 
-export default function clients(state = initState, action)
+export const clients = function (state = initStateClients, action)
 {
 	return state;
+}
+
+
+export const client = function (state = initStateClient, action)
+{
+
+	switch (action.type)
+	{
+		case 'SET_CLIENT':
+		return {
+			...state,
+			...action.data
+		};
+		default: return state;
+	}
+
 }

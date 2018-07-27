@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux';
-import clients from './app';
+import {clients, client} from './app';
 
 export default combineReducers({
-	clients
+	clients,
+	client
 });

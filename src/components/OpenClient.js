@@ -4,11 +4,29 @@ import {connect} from 'react-redux';
 class OpenClient extends Component {
 
 	render() {
-		console.log(this.props.clients);
 		return (
-			<div className="col-sm-7">
+			<div className="col-md-7 col-sm-12 open-client-wrap">
 				<div className="open-client">
-					Client Open
+					<div className="row">
+						<div className="col-sm-4">
+							<img src={this.props.client.general.avatar} />
+						</div>
+						<div className="col-sm-8">
+							<h2>{this.props.client.general.firstName}</h2>
+							<h3>{this.props.client.general.lastName}</h3>
+							<br />
+							<p>{this.props.client.job.company}</p>
+							<p>{this.props.client.job.title}</p>
+							<br />
+							<p>{this.props.client.contact.email}</p>
+							<p>{this.props.client.contact.phone}</p>
+							<br />
+							<p>{this.props.client.address.street}</p>
+							<p>{this.props.client.address.city}</p>
+							<p>{this.props.client.address.zipCode}</p>
+							<p>{this.props.client.address.country}</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		)
@@ -17,7 +35,7 @@ class OpenClient extends Component {
 
 export default connect (
 	state => ({
-		clients: state.clients
+		client: state.client
 	}),
 	dispatch => ({
 	})

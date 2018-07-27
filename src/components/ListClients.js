@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { Icon, Input } from 'semantic-ui-react';
-import Clients from './Clients';
+import Client from './Client';
 
 class ListClients extends Component {
 
@@ -12,7 +12,7 @@ class ListClients extends Component {
 		}
 	}
 
-	showClients() {
+	showClients = () => {
 		let filtred = [];
 		for (let j in this.props.clients) 
 		{
@@ -20,14 +20,14 @@ class ListClients extends Component {
 			if(this.state.str)
 			{
 				if(JSON.stringify(client).toLowerCase().search(this.state.str.toLowerCase()) !== -1) {
-						filtred.push(<Clients key={j} data={client} />);
+						filtred.push(<Client key={j} pkey={j} data={client} />);
 				} else 
 				{
 					continue;
 				}
 			} else 
 			{
-				filtred.push(<Clients key={j} data={client} />);
+				filtred.push(<Client key={j} pkey={j} data={client} />);
 			}
 		}
 			return filtred;
@@ -39,7 +39,7 @@ class ListClients extends Component {
 
 	render() {
 		return (
-			<div className="col-sm-5 text-left">
+			<div className="col-md-5 col-sm-12 text-left">
 				<div className="list-clients-wrap">
 					<div className="search">
 						<Input onInput={this.SearchClients} icon placeholder='Search'>

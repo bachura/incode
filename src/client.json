@@ -1,0 +1,21 @@
+{
+  "general": {
+    "firstName": "",
+    "lastName": "",
+    "avatar": ""
+  },
+  "job": {
+    "company": "",
+    "title": ""
+  },
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "address": {
+    "street": "",
+    "city": "",
+    "zipCode": "",
+    "country": ""
+  }
+}
